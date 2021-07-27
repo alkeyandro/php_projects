@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" href="/php_projects/styles.css">
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
