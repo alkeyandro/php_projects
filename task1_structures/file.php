@@ -259,7 +259,7 @@ getIDs();
         }
 
         echo "<form action='index.php#e8' method='post' class='job'><input hidden name='result' value='$output'><span>Loading...</span>
-                    <input hidden name='command' value='8'><input hidden type='submit' name='close' value='Volver' id='do'><script>document.getElementById('do').click();</script> 
+                    <input hidden name='command' value='9'><input hidden type='submit' name='close' value='Volver' id='do'><script>document.getElementById('do').click();</script> 
                     </form>";
     }
 
@@ -281,7 +281,7 @@ getIDs();
         }
 
         echo "<form action='index.php#e10' method='post' class='job'><input hidden name='result' value='$output'><span>Loading...</span>
-                <input hidden name='command' value='18'><input hidden type='submit' name='close' value='Volver' id='do'><script>document.getElementById('do').click();</script> 
+                <input hidden name='command' value='10'><input hidden type='submit' name='close' value='Volver' id='do'><script>document.getElementById('do').click();</script> 
                 </form>";
     }
 
