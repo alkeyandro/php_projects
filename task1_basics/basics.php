@@ -15,7 +15,7 @@
         }
 
 
-    echo "<form action='#' method='post' class='eform'><label>Nota 1:</lable><br>
+    echo "<form action='index.php#e1' method='post' class='eform'><label>Nota 1:</lable><br>
     <input type='number' name='n1'  value='' placeholder=' 25%' step='0.01'/><br><label>Nota 2:</lable><br><input type='number' name='n2'  value='' placeholder='25%' step='0.01'/><br><label>Nota 3:</lable><br><input type='number' name='n3'  value='' placeholder=' 25%' step='0.01'/><br><label>Nota 4:</lable><br><input type='number' name='n4'  value='' placeholder=' 25%' step='0.01'/><br><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     MyScore();
@@ -33,11 +33,11 @@
             $base = $_POST['baseT']; // "<script>input=prompt('Enter the base: ')</script>"; //(int)readline('Ingrese la base: ');
             $altura = $_POST['alturaT']; // "<script>input=prompt('Enter the heigth: ')</script>"; //(float)readline('Ingrese la altura: ');
             $resultado = floatval($base * $altura / 2);
-            
-            echo "<p class='output'>El área del triángulo con base: $base y altura: $altura es igual a $resultado</p>";
+
+            echo "<p class='output'>La calificación final del alumno para la asignatura de Algoritmos es: $resultado</p>";
         }
 
-    echo "<form action='#' method='post' class='eform'><input type='number' name='baseT'  value='' placeholder='Base' step='0.01'/><input type='number' name='alturaT'  value='' placeholder='Altura' step='0.01'/><br><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='index.php#e2' method='post' class='eform'><input type='number' name='baseT' value='' placeholder='Base' step='0.01'/><input type='number' name='alturaT' value='' placeholder='Altura' step='0.01'><br><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     areaTriangulo();
 
@@ -51,14 +51,14 @@
     echo "<div class='hdform'><img src='images/triangle.png' alt='image'><h1 class='exerc'>MyArea2</h1><!--<p class='descript'>El siguiente programa calcula el área de un triángulo equilátero.</p>--></div>";
 
         function areaTrianguloE () {
-            $l = $_POST['lado'];
-            $h = sqrt(3)/2 * $l;
-            $resultado = floatval($l * $h / 2);
+            $l = ($_POST['lado']);
+            $h = (sqrt(3)/2 * $l);
+            $resultado = (floatval($l * $h / 2));
             
             echo "<p class='output'>El área del triángulo equilátero de lado: $l es: $resultado<p>";
         }
 
-    echo "<form action='#' method='post' class='eform'><input type='text' name='lado'  value='' placeholder='Lado del triángulo:' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='#e3' method='post' class='eform'><input type='text' name='lado'  value='' placeholder='Lado del triángulo:' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     areaTrianguloE();
 
@@ -66,7 +66,7 @@
 </div>
 
 
-<div class='box' id='e3'>
+<div class='box' id='e4'>
 <?php
 
     echo "<div class='hdform'><img src='images/triangle.png' alt='image'><h1 class='exerc'>MyArea3</h1><!--<p class='descript'>El siguiente programa calcula el área de un triángulo rectángulo.</p>--></div>";
@@ -79,7 +79,7 @@
             echo "<p class='output'>El área del triángulo rectángulo de lados: $l1 y $l2 es: $resultado cm2<p>";
         }
 
-    echo "<form action='#' method='post' class='eform'><input type='text' name='lado1'  value='' placeholder='Lado 1 del triángulo:' step='0.01'/><input type='text' name='lado2'  value='' placeholder='Lado 2 del triángulo:' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='#e4' method='post' class='eform'><input type='text' name='lado1'  value='' placeholder='Lado 1 del triángulo:' step='0.01'/><input type='text' name='lado2'  value='' placeholder='Lado 2 del triángulo:' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     areaTrianguloR();
 
@@ -87,7 +87,7 @@
 </div>
 
 
-<div class='box' id='e4'>
+<div class='box' id='e5'>
 <?php
 
     echo "<div class='hdform'><img src='images/average.png' alt='image'><h1 class='exerc'>MyAverage</h1><!--<p class='descript'>El siguiente programa calcula el promedio de las asignaturas de un alumno.</p>--></div>";
@@ -115,7 +115,7 @@
             echo "<p class='output'>El alumno obtiene el siguiente promedio: <br>Matemáticas: $s1_result | Física: $s2_result | Química: $s3_result<br>Promedio general: $average</p>";
         }
 
-    echo "<form action='#' method='post' class='eform'><div id='eform4'><div id='container_e4'><div><span><label>Matemáticas</lable></span><br><label>Examen:</lable><input type='number' name='s1n1'  value='' placeholder='Nota 1' step='0.01'/><br><label>Tarea 1:</lable><input type='number' name='s1n2'  value='' placeholder='Nota 2' step='0.01'/><br><label>Tarea 2:</lable><input type='number' name='s1n3'  value='' placeholder='Nota 3' step='0.01'/><br><label>Tarea 3:</lable><input type='number' name='s1n4'  value='' placeholder='Nota 4' step='0.01'/></div><div><span><label>Física</lable></span><br><label>Examen:</lable><input type='number' name='s2n1'  value='' placeholder='Nota 1' step='0.01'/><br><label>Tarea 1:</lable><input type='number' name='s2n2'  value='' placeholder='Nota 2' step='0.01'/><br><label>Tarea 2:</lable><input type='number' name='s2n3'  value='' placeholder='Nota 3' step='0.01'/><br></div><div><span><label>Química</lable></span><br><label>Examen:</lable><input type='number' name='s3n1'  value='' placeholder='Nota 1' step='0.01'/><br><label>Tarea 1:</lable><input type='number' name='s3n2'  value='' placeholder='Nota 2' step='0.01'/><br><label>Tarea 2:</lable><input type='number' name='s2n3'  value='' placeholder='Nota 3' step='0.01'/><br><label>Tarea 3:</lable'><input type='number' name='s2n4'  value='' placeholder='Nota 4' step='0.01'/></div></div><br><input type='submit' name='button' value='Calculate' class='ebtn'/></div></form>";
+    echo "<form action='index.php#e5' method='post' class='eform'><div id='eform4'><div id='container_e4'><div><span><label>Matemáticas</lable></span><br><label>Examen:</lable><input type='number' name='s1n1'  value='' placeholder='Nota 1' step='0.01'/><br><label>Tarea 1:</lable><input type='number' name='s1n2'  value='' placeholder='Nota 2' step='0.01'/><br><label>Tarea 2:</lable><input type='number' name='s1n3'  value='' placeholder='Nota 3' step='0.01'/><br><label>Tarea 3:</lable><input type='number' name='s1n4'  value='' placeholder='Nota 4' step='0.01'/></div><div><span><label>Física</lable></span><br><label>Examen:</lable><input type='number' name='s2n1'  value='' placeholder='Nota 1' step='0.01'/><br><label>Tarea 1:</lable><input type='number' name='s2n2'  value='' placeholder='Nota 2' step='0.01'/><br><label>Tarea 2:</lable><input type='number' name='s2n3'  value='' placeholder='Nota 3' step='0.01'/><br></div><div><span><label>Química</lable></span><br><label>Examen:</lable><input type='number' name='s3n1'  value='' placeholder='Nota 1' step='0.01'/><br><label>Tarea 1:</lable><input type='number' name='s3n2'  value='' placeholder='Nota 2' step='0.01'/><br><label>Tarea 2:</lable><input type='number' name='s2n3'  value='' placeholder='Nota 3' step='0.01'/><br><label>Tarea 3:</lable'><input type='number' name='s2n4'  value='' placeholder='Nota 4' step='0.01'/></div></div><br><input type='submit' name='button' value='Calculate' class='ebtn'/></div></form>";
 
     MyAverage();
 
@@ -123,7 +123,7 @@
 </div>
 
 
-<div class='box' id='e5'>
+<div class='box' id='e6'>
 <?php
     echo "<div class='hdform'><img src='images/cart.png' alt='image'><h1 class='exerc'>Business share</h1><!--<p class='descript'>El siguiente programa muestra el porcentaje invertido por persona en la empresa.</p>--></div>";
             
@@ -138,14 +138,14 @@
             echo "<p class='output'>El capital aportado para la empresa se divide así: Persona 1: $sh1 %. Persona 2: $sh2 %. Persona 3: $sh3 %.</p>";
         }
     
-    echo "<form action='#' method='post' class='eform'><lable>Persona 1:</label><br><input type='number' name='p1'  value='' placeholder='Monto invertido $' step='0.01'/><br><lable>Persona 2:</label><br><input type='number' name='p2'  value='' placeholder='Monto invertido $' step='0.01'/><br><lable>Persona 3:</label><br><input type='number' name='p3'  value='' placeholder='Monto invertido $' step='0.01'/><br><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='index.php#e6' method='post' class='eform'><lable>Persona 1:</label><br><input type='number' name='p1'  value='' placeholder='Monto invertido $' step='0.01'/><br><lable>Persona 2:</label><br><input type='number' name='p2'  value='' placeholder='Monto invertido $' step='0.01'/><br><lable>Persona 3:</label><br><input type='number' name='p3'  value='' placeholder='Monto invertido $' step='0.01'/><br><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     //the_func();
 ?>
 </div>
 
 
-<div class='box' id='e6'>
+<div class='box' id='e7'>
 <?php
 
     echo "<div class='hdform'><img src='images/triangle.png' alt='image'><h1 class='exerc'>MyArea!</h1><!--<p class='descript'>El siguiente programa calcula el área de un circulo.</p>--></div>";
@@ -158,7 +158,7 @@
             echo "<p class='output'>El área del círculo de diámetro: $d es de: $resultado<p>";
         }
     
-    echo "<form action='#' method='post' class='eform'><input type='number' name='diametro'  value='' placeholder='Diámetro del circulo:' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='index.php#e7' method='post' class='eform'><input type='number' name='diametro'  value='' placeholder='Diámetro del circulo:' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     areaCirculo();
 
@@ -166,7 +166,7 @@
 </div>
 
 
-<div class='box' id='e7'>
+<div class='box' id='e8'>
 <?php
 
     echo "<div class='hdform'><img src='images/currency.png' alt='image'><h1 class='exerc'>Currency exchange</h1><!--<p class='descript'>El siguiente programa muestra el porcentaje de alumnos hombres y mujeres</p>--></div>";
@@ -179,7 +179,7 @@
             echo "<p class='output'>A un precio por dólar de: $dolar, $pesos pesos equivalen a: $resultado dólares.</p>";
         }
     
-    echo "<form action='#' method='post' class='eform'><div><label>¿Cuánto vas a cambiar?</label><br><input type='number' name='pesos'  value='' placeholder='Pesos' step='0.01'/></div><div><label>Tasa de cambio</label><br><input type='number' name='dolar'  value='' placeholder='Dólar' step='0.01'/></div><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='index.php#e8' method='post' class='eform'><div><label>¿Cuánto vas a cambiar?</label><br><input type='number' name='pesos'  value='' placeholder='Pesos' step='0.01'/></div><div><label>Tasa de cambio</label><br><input type='number' name='dolar'  value='' placeholder='Dólar' step='0.01'/></div><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     //convertCoins();
 
@@ -187,7 +187,7 @@
 </div>
 
 
-<div class='box' id='e8'>
+<div class='box' id='e9'>
 <?php         
     echo "<div class='hdform'><img src='images/saves.png' alt='image'><h1 class='exerc'>MyDiscount</h1><!--<p class='descript'>El siguiente programa calcula el valor final de los artículos según el descuento aplicado.</p>--></div>";
 
@@ -200,7 +200,7 @@
             echo "<p class='output'>El valor final de la compra es de: $costo menos: $descuento del $porcentaje de descuento. Total: $resultado<p>";
         }
 
-    echo "<form action='#' method='post' class='eform'><input type='number' name='costo'  value='' placeholder='Costo de los artículos' step='0.01'/><input type='number' name='porcentaje'  value='15' placeholder='% de descuento' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='index.php#e9' method='post' class='eform'><input type='number' name='costo'  value='' placeholder='Costo de los artículos' step='0.01'/><input type='number' name='porcentaje'  value='15' placeholder='% de descuento' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     MyDiscount();
 
@@ -208,7 +208,7 @@
 </div>
 
 
-<div class='box' id='e9'>
+<div class='box' id='e10'>
 <?php
 
     echo "<div class='hdform'><img src='images/maths.png' alt='image'><h1 class='exerc'>Div</h1><!--<p class='descript'>El siguiente programa calcula el cociente y el residuo de la división.</p>--></div>";
@@ -222,7 +222,7 @@
             echo "<p class='output'>De la división entre: $dividendo / $divisor se obtiene el cociente: $cociente y el residuo: $residuo<p>";
         }
 
-    echo "<form action='#' method='post' class='eform'><input type='number' name='dividendo'  value='' placeholder='Dividendo:' step='0.01'/><input type='number' name='divisor'  value='' placeholder='Divisor:' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='index.php#e10' method='post' class='eform'><input type='number' name='dividendo'  value='' placeholder='Dividendo:' step='0.01'/><input type='number' name='divisor'  value='' placeholder='Divisor:' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     //setDiv();
 
@@ -230,7 +230,7 @@
 </div>
 
 
-<div class='box' id='e10'>
+<div class='box' id='e11'>
 <?php
 
     echo "<div class='hdform'><img src='images/dollop.png' alt='image'><h1 class='exerc'>Relacion masa</h1><!--<p class='descript'>El siguiente programa calcula la relación de la masa con la presión, el volumen y la temperatura</p>--></div>";
@@ -244,7 +244,7 @@
             echo "<p class='output'>Masa = $masa<p>";
         }
 
-    echo "<form action='#' method='post' class='eform'><input type='number' name='presion'  value='' placeholder='Presión:' step='0.01'/><input type='number' name='volumen' value='' placeholder='Volumen:' step='0.01'/><input type='number' name='temperatura'  value='' placeholder='Temperatura:' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='index.php#e11' method='post' class='eform'><input type='number' name='presion'  value='' placeholder='Presión:' step='0.01'/><input type='number' name='volumen' value='' placeholder='Volumen:' step='0.01'/><input type='number' name='temperatura'  value='' placeholder='Temperatura:' step='0.01'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     getMasa();
 
@@ -252,7 +252,7 @@
 </div>
 
 
-<div class='box' id='e11'>
+<div class='box' id='e12'>
 <?php
             
     echo "<div class='hdform'><img src='images/average.png' alt='image'><h1 class='exerc'>MyGrades</h1><!--<p class='descript'>El siguiente programa calcula la nota definitiva de un alumno según la rúbrica de calificaciones.</p>--></div>";
@@ -268,13 +268,13 @@
             echo "<p class='output'>La calificación final del alumno para la asignatura de Algoritmos es: $resultado<p>";
         }
 
-    echo "<form action='#' method='post' class='eform'><label>Calificación Parcial 1:</lable><br><input type='number' name='cp1' value='' placeholder='Nota 1' step='0.01'/><br><label>Calificación Parcial 2:</lable><br><input type='number' name='cp2'  value='' placeholder='Nota 2' step='0.01'/><br><label>Calificación Parcial 3:</lable><br><input type='number' name='cp3'  value='' placeholder='Nota 3' step='0.01'/><br><label>Examen Final:</lable><br><input type='number' name='exf'  value='' placeholder='Nota 4' step='0.01'/><br><label>Trabajo Final</lable><br><input type='number' name='trf'  value='' placeholder='Nota 5' step='0.01'/><br><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='index.php#e12' method='post' class='eform'><label>Calificación Parcial 1:</lable><br><input type='number' name='cp1' value='' placeholder='Nota 1' step='0.01'/><br><label>Calificación Parcial 2:</lable><br><input type='number' name='cp2'  value='' placeholder='Nota 2' step='0.01'/><br><label>Calificación Parcial 3:</lable><br><input type='number' name='cp3'  value='' placeholder='Nota 3' step='0.01'/><br><label>Examen Final:</lable><br><input type='number' name='exf'  value='' placeholder='Nota 4' step='0.01'/><br><label>Trabajo Final</lable><br><input type='number' name='trf'  value='' placeholder='Nota 5' step='0.01'/><br><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     MyFinal();
 
 ?>
 </div>
-<div class='box' id='e12'>
+<div class='box' id='e13'>
 <?php
             
     echo "<div class='hdform'><img src='images/health.png' alt='image'><h1 class='exerc'>Health Tracker</h1><!--<p class='descript'>El siguiente programa calcula el número de pulsaciones.</p>--></div>";
@@ -286,7 +286,7 @@
             echo "<br>El número de pulsaciones cada 10 segundo es: $resultado<br>";
         }
 
-    echo "<form action='#' method='post' class='eform'><input type='number' name='edad'  value='' placeholder='Edad'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='index.php#e13' method='post' class='eform'><input type='number' name='edad'  value='' placeholder='Edad'/><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     pulsations();
 
@@ -294,7 +294,7 @@
 </div>
 
 
-<div class='box' id='e13'>
+<div class='box' id='e14'>
 <?php
             
     echo "<div class='hdform'><img src='images/budget.png' alt='image'><h1 class='exerc'>Budget</h1><!--<p lass='descript'>El siguiente programa calcula la asignación presupuestal para las áreas del hospital.</p>--></div>";
@@ -311,7 +311,7 @@
             echo "<br>La asignación presupuestal queda así: Ginecología: $gin; Traumatología: $tra y Pediatría: $ped<br>";
         }
 
-    echo "<form action='#' method='post' class='eform'><label>Presupuesto anual:</lable><input type='number' name='total'  value='' placeholder='Total presupuesto para el año'/><br><label>Ginecología:</lable><input type='number' name='area1'  value='40' placeholder='Asignación presupuestal %'/><br><label>Traumatología:</lable><input type='number' name='area2'  value='30' placeholder='Asignación presupuestal %'/><br><label>Pediatría:</lable><input type='number' name='area3'  value='30' placeholder='Asignación presupuestal %'/><br><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
+    echo "<form action='index.php#e14' method='post' class='eform'><label>Presupuesto anual:</lable><input type='number' name='total'  value='' placeholder='Total presupuesto para el año'/><br><label>Ginecología:</lable><input type='number' name='area1'  value='40' placeholder='Asignación presupuestal %'/><br><label>Traumatología:</lable><input type='number' name='area2'  value='30' placeholder='Asignación presupuestal %'/><br><label>Pediatría:</lable><input type='number' name='area3'  value='30' placeholder='Asignación presupuestal %'/><br><input type='submit' name='button' value='Calculate' class='ebtn'/></form>";
 
     setBudget();
 
@@ -319,7 +319,7 @@
 </div>
 
 
-<div class='box' id='e14'>
+<div class='box' id='e15'>
         <?php
             
             echo "<div class='hdform'><img src='images/salary.png' alt='image'><h1>Salary</h1></div>";
@@ -336,7 +336,7 @@
             }
         ?>
 
-        <form action="#" method="post">
+        <form action="index.php#e15" method="post">
         <input type="text" name="basico"  value="" placeholder="Salario básico"/>
         <input type="text" name="ventas"  value="" placeholder="Ventas del mes"/>
         <input type="submit" name="button" value="Calculate"/>
@@ -346,7 +346,7 @@
             MyIncome();
         ?>
 </div>
-<div class='box' id='e15'>
+<div class='box' id='e16'>
         <?php
             
             echo "<div class='hdform'><img src='images/raise.png' alt='image'><h1>New Salary</h1></div>";
@@ -361,7 +361,7 @@
             }
         ?>
 
-        <form action="#" method="post">
+        <form action="index.php#e16" method="post">
         <input type="text" name="current_salary"  value="" placeholder="Salario actual"/>
         <input type="text" name="raise"  value="25" placeholder="% Incremento"/>
         <input type="submit" name="button" value="Calculate"/>
@@ -371,7 +371,7 @@
             raisePayment();
         ?>
 </div>
-<div class='box' id='e16'>
+<div class='box' id='e17'>
         <?php
             
             echo "<div class='hdform'><img src='images/invest.png' alt='image'><h1>Invest</h1></div>";
@@ -387,7 +387,7 @@
             }
         ?>
 
-        <form action="#" method="post">
+        <form action="index.php#e17" method="post">
         <input type="text" name="capital"  value="" placeholder="Capital invertido"/>
         <input type="text" name="interes"  value="" placeholder="Interes mensual"/>
         <input type="submit" name="button" value="Calculate"/>
@@ -397,7 +397,7 @@
             getIncome();
         ?>
 </div>
-<div class='box' id='e17'>
+<div class='box' id='e18'>
         <?php
             
             echo "<div class='hdform'><img src='images/price.png' alt='image'><h1>Price to sell</h1></div>";
@@ -412,7 +412,7 @@
             }
         ?>
 
-        <form action="#" method="post">
+        <form action="index.php#e18" method="post">
         <input type="text" name="costo"  value="" placeholder="Costo proveedor $"/>
         <input type="text" name="ganancia"  value="30" placeholder="Ganancia esperada %"/>
         <input type="submit" name="button" value="Calculate"/>
@@ -422,7 +422,7 @@
             pricing();
         ?>
 </div>
-<div class='box' id='e18'>
+<div class='box' id='e19'>
 
         <?php
             
@@ -438,7 +438,7 @@
             }
         ?>
 
-        <form action="#" method="post">
+        <form action="index.php#e19" method="post">
         <input type="text" name="diagonalM"  value="" placeholder="Diagonal mayor:"/>
         <input type="text" name="diagonalm"  value="" placeholder="Diagonal menor:"/>
         <input type="submit" name="button" value="Calculate"/>
@@ -449,7 +449,7 @@
         ?>
 
 </div>
-<div class='box' id='e19'>
+<div class='box' id='e20'>
     <?php
             
             echo "<div class='hdform'><img src='images/triangle.png' alt='image'><h1>Rombo perimeter</h1></div>";
@@ -463,7 +463,7 @@
             }
         ?>
 
-        <form action="#" method="post">
+        <form action="index.php#e20" method="post">
         <input type="text" name="lado"  value="" placeholder="Lado del rombo:"/>
         <input type="submit" name="button" value="Calculate"/>
         </form>
@@ -472,7 +472,7 @@
             perimeterRombo();
         ?>
 </div>
-<div class='box' id='e20'>
+<div class='box' id='e21'>
         <?php
             
             echo "<div class='hdform'><img src='images/school.png' alt='image'><h1>Students by gender</h1></div>";
@@ -488,7 +488,7 @@
             }
         ?>
 
-        <form action="#" method="post">
+        <form action="index.php#e21" method="post">
         <input type="text" name="hombres"  value="" placeholder="Total de hombres en el grupo"/>
         <input type="text" name="mujeres"  value="" placeholder="Total de mujeres en el grupo"/>
         <input type="submit" name="button" value="Calculate"/>

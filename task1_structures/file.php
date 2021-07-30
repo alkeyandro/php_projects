@@ -258,7 +258,7 @@ getIDs();
             $output = "El consumo de calorias al estar dormido durante $time minutos es de: $result calorias. <br>";
         }
 
-        echo "<form action='index.php#e8' method='post' class='job'><input hidden name='result' value='$output'><span>Loading...</span>
+        echo "<form action='index.php#e9' method='post' class='job'><input hidden name='result' value='$output'><span>Loading...</span>
                     <input hidden name='command' value='9'><input hidden type='submit' name='close' value='Volver' id='do'><script>document.getElementById('do').click();</script> 
                     </form>";
     }
