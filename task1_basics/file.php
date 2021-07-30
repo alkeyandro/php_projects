@@ -3,7 +3,7 @@
 <head>
 	<title>
 		<?php
-			echo "Structures";
+			echo "File";
 		?>
 	</title>
 	<link rel="stylesheet" href="styles.css">
@@ -12,8 +12,6 @@
 <body>	
 <?php
 
-	include('structures.php');
-		
 ?>
 </body>
 </html>
